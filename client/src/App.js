@@ -58,7 +58,7 @@ const App = () => {
   const fetchData = async () => {
 
     try {
-      const res = await fetch('/home', {
+      const res = await fetch('https://indian-start-up.vercel.app/home', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -93,7 +93,7 @@ const App = () => {
   const postPage = async (p) => {
 
     try {
-      const res = await fetch('/current-page', {
+      const res = await fetch('https://indian-start-up.vercel.app/current-page', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -128,7 +128,7 @@ const App = () => {
   const handleSubmit = async () => {
 
     try {
-      const res = await fetch('/filtered-data', {
+      const res = await fetch('https://indian-start-up.vercel.app/filtered-data', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
