@@ -10,6 +10,9 @@ app.use(cors({origin:["https://indian-start-up-directory-radhika-rh7g.vercel.app
 
 app.get('/home', (req, res) => {
 
+    console.log("/home triggered")
+    console.log(data)
+
     const ITEMS_PER_PAGE = 9;
 
     const dataArray = data;
@@ -21,7 +24,9 @@ app.get('/home', (req, res) => {
     response[0] = displayedItems
     response[1] = data.length
 
-    res.json(response)
+    console.log(response)
+
+    res.send(response)
 
 })
 
@@ -35,7 +40,7 @@ app.post("/current-page", (req, res) => {
     const startIndex = (currentPage - 1) * 9;
     const endIndex = startIndex + 9;
     const currentItems = data.slice(startIndex, endIndex);
-    res.json([currentItems, data.length])
+    res.send([currentItems, data.length])
 
 })
 
