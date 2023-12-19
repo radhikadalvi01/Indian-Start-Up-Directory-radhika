@@ -67,7 +67,7 @@ const App = () => {
         credentials: 'include',
       });
       const data = await res.json();
-      conolse.log("data from back in fetch:",data)
+      console.log("data from back in fetch:",data)
       setData(data);
       if (!res.status === 200) {
         console.log('Error');
