@@ -83,6 +83,8 @@ const App = () => {
     fetchData();
   }, []);
 
+  console.log(data)
+
 
   /*Post page number to backend*/
 
