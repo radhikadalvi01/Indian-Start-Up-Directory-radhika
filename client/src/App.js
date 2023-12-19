@@ -79,6 +79,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    console.log("called")
     fetchData();
   }, []);
 
