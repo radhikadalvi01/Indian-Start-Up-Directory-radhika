@@ -56,7 +56,7 @@ const App = () => {
   /*Fetch Data From Backend*/
 
   const fetchData = async () => {
-
+  console.log("fetch called")
     try {
       const res = await fetch('/home', {
         method: 'GET',
@@ -67,6 +67,7 @@ const App = () => {
         credentials: 'include',
       });
       const data = await res.json();
+      conolse.log("data from back in fetch:",data)
       setData(data);
       if (!res.status === 200) {
         console.log('Error');
