@@ -25,6 +25,9 @@ app.get('/home', (req, res) => {
 
 })
 
+app.get('/',(req,res)=>{
+    res.send("test")
+})
 
 app.post("/current-page", (req, res) => {
 
