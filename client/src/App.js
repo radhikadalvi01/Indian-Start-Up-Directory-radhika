@@ -58,7 +58,7 @@ const App = () => {
   const fetchData = async () => {
   console.log("fetch called")
     try {
-      const res = await fetch('/home', {
+      const res = await fetch('https://indian-start-up-directory-radhika.vercel.app/home', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
