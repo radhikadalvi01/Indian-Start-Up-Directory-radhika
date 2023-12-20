@@ -6,7 +6,7 @@ const data = require("./data.json")
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-app.use(cors({origin:["https://indian-start-up-directory.onrender.com"],methods:["POST","GET"],credentials:true}));
+app.use(cors({origin:["https://indian-start-up-directory-2.onrender.com"],methods:["POST","GET"],credentials:true}));
 
 app.get('/home', (req, res) => {
 
