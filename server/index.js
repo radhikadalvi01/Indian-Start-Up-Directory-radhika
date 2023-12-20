@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(cors({origin:["https://indian-start-up-directory-radhika-rh7g.vercel.app/"],methods:["POST","GET"],credentials:true}));
 
-app.get('home', (req, res) => {
+app.get('/home', (req, res) => {
 
     console.log("/home triggered")
     console.log(data)
@@ -34,7 +34,7 @@ app.get('',(req,res)=>{
     res.send("test")
 })
 
-app.post("current-page", (req, res) => {
+app.post("/current-page", (req, res) => {
 
     const currentPage = req.body.page
     const startIndex = (currentPage - 1) * 9;
@@ -44,7 +44,7 @@ app.post("current-page", (req, res) => {
 
 })
 
-app.post("filtered-data", (req, res) => {
+app.post("/filtered-data", (req, res) => {
 
     const filters = req.body.filters
     const filteredData = data.filter(item => {
